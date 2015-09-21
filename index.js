@@ -1,9 +1,5 @@
-// This file defines an ordered dictionary abstraction that is useful for
-// maintaining a dataset backed by observeChanges.  It supports ordering items
-// by specifying the item they now come before.
 
-// The implementation is a dictionary that contains nodes of a doubly-linked
-// list as its values.
+var _ = require('underscore');
 
 // constructs a new element struct
 // next and prev are whole elements, not keys.
@@ -15,7 +11,8 @@ var element = function (key, value, next, prev) {
     prev: prev
   };
 };
-OrderedDict = function (/* ... */) {
+
+var OrderedDict = function (/* ... */) {
   var self = this;
   self._dict = {};
   self._first = null;
@@ -206,4 +203,5 @@ _.extend(OrderedDict.prototype, {
   }
 
 });
+
 OrderedDict.BREAK = {"break": true};

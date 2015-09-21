@@ -1,0 +1,8 @@
+{
+  "name": "ordered-dict",
+  "version": "1.0.4",
+  "description": "Ordered traversable dictionary with a mutable ordering",
+  "dependencies": {
+    "underscore": "aleclarson/underscore#1.5.2"
+  }
+}
